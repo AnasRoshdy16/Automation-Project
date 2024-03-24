@@ -1,5 +1,6 @@
 package DriverFactory;
 
+import Utilities.LogsUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -37,5 +38,6 @@ public class DriverFactory {
         {
             getDriver().quit();
             driverThreadLocal.remove();
+            LogsUtils.info(" The browser is closed");
         }
 }
