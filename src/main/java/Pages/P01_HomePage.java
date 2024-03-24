@@ -10,7 +10,7 @@ public class P01_HomePage {
     public P01_HomePage(WebDriver driver) {
         this.driver = driver;
     }
-    private final By homeButton = By.xpath("//a[.=' Home']");
+    private final By homeButton = By.xpath("//a[.=' Home']"l);
     private final By signupOrLoginButton = By.xpath("//a[@href='/login']");
 
     public boolean HomeButtonVisibility(){
