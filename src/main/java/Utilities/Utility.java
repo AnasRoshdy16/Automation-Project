@@ -44,17 +44,17 @@ public class Utility {
     public static void scrolling(WebDriver driver,By locator)
     {
         ((JavascriptExecutor)driver)
-                .executeScript("arguments[0].scrollIntoView();",findWebElement(driver,locator));
+                .executeScript("arguments[0].scrollIntoView();",byToWebElement(driver,locator));
     }
 
-    public static WebElement findWebElement(WebDriver driver,By locator)
+    public static WebElement byToWebElement(WebDriver driver,By locator)
     {
         return driver.findElement(locator);
     }
 
     public static void selectingFromDropDown (WebDriver driver,By locator,String option)
     {
-         new Select(findWebElement(driver,locator)).selectByVisibleText(option);
+         new Select(byToWebElement(driver,locator)).selectByVisibleText(option);
     }
     public static String getTimeStamp()
     {
@@ -78,7 +78,7 @@ public class Utility {
     public static void takeFullscreenshot(WebDriver driver, By locator) {
         try {
             Shutterbug.shootPage(driver, Capture.FULL_SCROLL)
-                    .highlight(findWebElement(driver, locator)).save(SCREENSHOTS_PATH);
+                    .highlight(byToWebElement(driver, locator)).save(SCREENSHOTS_PATH);
         } catch (Exception e) {
             LogsUtils.error(e.getMessage());
         }
@@ -104,6 +104,13 @@ public class Utility {
             return false;
         }
         return true;
+    }
+    public static boolean checkVisibility(WebDriver driver, By locator){
+
+        new WebDriverWait(driver,Duration.ofSeconds(10))
+                .until(ExpectedConditions
+                        .visibilityOfElementLocated(locator));
+        return Utility.byToWebElement(driver,locator).isDisplayed();
     }
 
 
