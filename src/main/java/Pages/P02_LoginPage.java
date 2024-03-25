@@ -9,8 +9,8 @@ public class P02_LoginPage {
     private final WebDriver driver;
 
     private By NewSignUpText = By.xpath("//h2[.='New User Signup!']");
-    private By Name = By.xpath("//input[@name='name']");
-    private By Email = By.xpath("//input[@name='email']");
+    private By Name = By.xpath("//input[@data-qa='signup-name']");
+    private By Email = By.xpath("//input[@data-qa='signup-email']");
     private By SignupButton = By.xpath("//button[@data-qa='signup-button']");
 
     public P02_LoginPage(WebDriver driver) {
@@ -28,7 +28,7 @@ public class P02_LoginPage {
     }
 
     public P02_LoginPage Enteremail(String emailtext) {
-        Utility.sendData(driver, Name, emailtext);
+        Utility.sendData(driver, Email, emailtext);
         LogsUtils.info("email is added");
         return this;
     }
