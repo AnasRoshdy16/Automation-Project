@@ -16,9 +16,10 @@ public class P05_DeleteAccountPage {
     public boolean AccountDeletedMsgVisibility() {
         return Utility.checkVisibility(driver, accountDeletedMessage);
     }
-    public P05_DeleteAccountPage clickContinueButton() {
+
+    public P01_HomePage clickContinueButton() {
         Utility.clickingOnElement(driver, continueButton);
-        return this;
+        return new P01_HomePage(driver);
     }
 
 }

@@ -1,0 +1,4 @@
+[INFO] 26-03-2024 20:07:33 [main] [Tests.T04_DeleteAccountTest.setup(T04_DeleteAccountTest.java:22)] -  Edge Driver is opened 
+[INFO] 26-03-2024 20:07:39 [main] [Tests.T04_DeleteAccountTest.setup(T04_DeleteAccountTest.java:24)] -  Page is redirected to the URL 
+[INFO] 26-03-2024 20:07:52 [main] [Tests.T04_DeleteAccountTest.deleteAccountTC(T04_DeleteAccountTest.java:38)] - Deleting the account started
+[INFO] 26-03-2024 20:07:58 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

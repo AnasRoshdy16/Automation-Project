@@ -1,0 +1,5 @@
+[INFO] 26-03-2024 16:44:08 [main] [Tests.T03_SignupTest.setup(T03_SignupTest.java:22)] -  Edge Driver is opened 
+[INFO] 26-03-2024 16:44:14 [main] [Tests.T03_SignupTest.setup(T03_SignupTest.java:24)] -  Page is redirected to the URL 
+[INFO] 26-03-2024 16:44:14 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case SignupTC started
+[INFO] 26-03-2024 16:44:25 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:19)] - Test Case SignupTC failed
+[INFO] 26-03-2024 16:44:27 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed
