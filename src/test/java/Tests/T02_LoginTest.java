@@ -3,6 +3,7 @@ package Tests;
 import Listeners.IInvokedMethodListenerClass;
 import Listeners.ITestResultListenerClass;
 import Pages.P01_HomePage;
+import Pages.P02_LoginPage;
 import Utilities.LogsUtils;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -14,12 +15,11 @@ import java.io.IOException;
 import java.time.Duration;
 
 import static DriverFactory.DriverFactory.*;
+import static Utilities.DataUtils.getJsonData;
 import static Utilities.DataUtils.getPropertyValue;
 
 @Listeners({IInvokedMethodListenerClass.class, ITestResultListenerClass.class})
-public class TC01_HomeTest {
-
-
+public class T02_LoginTest {
     @BeforeMethod
     public void setup() throws IOException {
         setupDriver(getPropertyValue("environment", "Browser"));
@@ -31,18 +31,22 @@ public class TC01_HomeTest {
     }
 
     @Test
+    public void SignupTC() {
 
-    public void VerifyGoToLoginPageTC() {
-        Assert.assertTrue(new P01_HomePage(getDriver()).HomeButtonVisibility());
-    }
-
-    @Test
-    public void clickOnSignupButtonTC() {
         new P01_HomePage(getDriver()).clickOnSignupButton();
+        //Asserting signup text visibility
+        Assert.assertTrue(new P02_LoginPage(getDriver()).NewSignupVisibility());
+        LogsUtils.info("Filling out Credentials");
+        new P02_LoginPage(getDriver())
+                .Entername(getJsonData("SignupInformation", "Name"))
+                .Enteremail(getJsonData("SignupInformation", "Email"))
+                .clickOnSignupButton();
     }
+
 
     @AfterMethod
     public void quit() {
         quitDriver();
     }
 }
+

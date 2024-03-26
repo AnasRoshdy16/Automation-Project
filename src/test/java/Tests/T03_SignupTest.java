@@ -2,16 +2,10 @@ package Tests;
 
 import Listeners.IInvokedMethodListenerClass;
 import Listeners.ITestResultListenerClass;
-import Pages.P01_HomePage;
-import Pages.P02_LoginPage;
-import Pages.P03_SignupPage;
-import Pages.P04_AccountCreatedPage;
+import Pages.*;
 import Utilities.LogsUtils;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -21,7 +15,7 @@ import static Utilities.DataUtils.getJsonData;
 import static Utilities.DataUtils.getPropertyValue;
 
 @Listeners({IInvokedMethodListenerClass.class, ITestResultListenerClass.class})
-public class TC03_SignupTest {
+public class T03_SignupTest {
     @BeforeMethod
     public void setup() throws IOException {
         setupDriver(getPropertyValue("environment", "Browser"));
@@ -33,19 +27,16 @@ public class TC03_SignupTest {
     }
 
     @Test
-    public void SignupTC() throws IOException {
+    public void SignupTC() {
 
-        new P01_HomePage(getDriver()).clickOnSignupButton();
-        //Asserting signup text visibility
-        Assert.assertTrue(new P02_LoginPage(getDriver()).NewSignupVisibility());
-        LogsUtils.info("Filling out Credentials");
-        new P02_LoginPage(getDriver())
-                .Entername(getJsonData("SignupInformation", "Name"))
-                .Enteremail(getJsonData("SignupInformation", "Email"))
-                .clickOnSignupButton();
-        LogsUtils.info("Partial Signup");
+        //Pre-conditions
+        new P01_HomePage(getDriver()).clickOnSignupButton()
+                .signUpInLoginPageSteps();
+
+        //The actual test case starts here
         Assert.assertTrue(new P03_SignupPage(getDriver()).AccountInformationTextVisibility());
         LogsUtils.info("Assertion on Account Info Text");
+
         new P03_SignupPage(getDriver())
                 .clickTitleButton()
                 .EnterPassword("Test1234")
@@ -56,20 +47,24 @@ public class TC03_SignupTest {
                 .ClickSpecialOffersCheckbox()
                 .EnterFirstName("Omar")
                 .EnterLastName("Mohamed")
-                .EnterCompanyName("Selenium")
-                .EnterAddress1Name("Nasr City,Abbas")
-                .EnterAddress2Name("Makram ebed")
-                .SelectingCountryDropdown("Canada")
-                .EnterStateName("Ontario")
-                .EnterCityName("Toronto")
-                .EnterZipCode("12311")
-                .EnterMobileNumber("01132055998")
+                .EnterCompanyName("Jobless")
+                .EnterAddress1Name("Cairo")
+                .EnterAddress2Name("NotCairo")
+                .SelectingCountryDropdown("Egypt")
+                .EnterStateName("IDK")
+                .EnterCityName("Giza")
+                .EnterZipCode("12345")
+                .EnterMobileNumber("01001212111")
                 .clickCreateAccountButton();
-        //Assertion of visibility on Account created
-        LogsUtils.info("Assertion on AccountCreation");
-        Assert.assertTrue(new P04_AccountCreatedPage(getDriver()).AccountCreatedTextVisibility());
-    }
 
+        //Assertion of visibility on Account created
+        Assert.assertTrue(new P04_AccountCreatedPage(getDriver()).AccountCreatedTextVisibility());
+
+        new P04_AccountCreatedPage(getDriver()).clickContinueButton();
+        //Assertion of visibility of user is logged in
+        Assert.assertTrue(new P01_HomePage(getDriver()).loggedInVisibility());
+
+    }
 
     @AfterMethod
     public void quit() {

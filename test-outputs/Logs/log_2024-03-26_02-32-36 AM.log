@@ -1,0 +1,4 @@
+[INFO] 26-03-2024 02:32:36 [main] [Tests.T03_SignupTest.setup(T03_SignupTest.java:22)] -  Edge Driver is opened 
+[INFO] 26-03-2024 02:32:40 [main] [Tests.T03_SignupTest.setup(T03_SignupTest.java:24)] -  Page is redirected to the URL 
+[INFO] 26-03-2024 02:32:40 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case SignupTC started
+[INFO] 26-03-2024 02:32:43 [main] [Tests.T03_SignupTest.SignupTC(T03_SignupTest.java:34)] - Credentials for partial signup is filled

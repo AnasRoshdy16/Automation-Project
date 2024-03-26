@@ -1,10 +1,10 @@
-[INFO] 24-03-2024 23:00:08 [main] [Tests.TC01_HomeTest.setup(TC01_HomeTest.java:26)] -  Edge Driver is opened 
-[INFO] 24-03-2024 23:00:13 [main] [Tests.TC01_HomeTest.setup(TC01_HomeTest.java:28)] -  Page is redirected to the URL 
+[INFO] 24-03-2024 23:00:08 [main] [Tests.T01_HomeTest.setup(TC01_HomeTest.java:26)] -  Edge Driver is opened
+[INFO] 24-03-2024 23:00:13 [main] [Tests.T01_HomeTest.setup(TC01_HomeTest.java:28)] -  Page is redirected to the URL
 [INFO] 24-03-2024 23:00:13 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case VerifyGoToLoginPageTC started
 [INFO] 24-03-2024 23:00:14 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case VerifyGoToLoginPageTC passed
 [INFO] 24-03-2024 23:00:15 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed
-[INFO] 24-03-2024 23:00:21 [main] [Tests.TC01_HomeTest.setup(TC01_HomeTest.java:26)] -  Edge Driver is opened 
-[INFO] 24-03-2024 23:00:25 [main] [Tests.TC01_HomeTest.setup(TC01_HomeTest.java:28)] -  Page is redirected to the URL 
+[INFO] 24-03-2024 23:00:21 [main] [Tests.T01_HomeTest.setup(TC01_HomeTest.java:26)] -  Edge Driver is opened
+[INFO] 24-03-2024 23:00:25 [main] [Tests.T01_HomeTest.setup(TC01_HomeTest.java:28)] -  Page is redirected to the URL
 [INFO] 24-03-2024 23:00:25 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case clickOnSignupButtonTC started
 [INFO] 24-03-2024 23:00:31 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case clickOnSignupButtonTC passed
 [INFO] 24-03-2024 23:00:32 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

@@ -125,5 +125,26 @@ public class P03_SignupPage {
         Utility.clickingOnElement(driver, CreateAccountButton);
         return new P04_AccountCreatedPage(driver);
     }
+    public P03_SignupPage signUpSteps(){
+        Utility.clickingOnElement(driver, TitleButton);
+        Utility.sendData(driver, PasswordLane, "Test1234");
+        Utility.sendData(driver, DaysDropdown, "2");
+        Utility.sendData(driver, MonthsDropdown, "February");
+        Utility.sendData(driver, YearsDropdown, "1994");
+        Utility.clickingOnElement(driver, NewsletterCheckBox);
+        Utility.clickingOnElement(driver, SpecialOffersCheckBox);
+        Utility.sendData(driver, FirstName, "Ammar");
+        Utility.sendData(driver, LastName, "Elfeky");
+        Utility.sendData(driver, Company, "Jobless");
+        Utility.sendData(driver, Address1, "Cairo");
+        Utility.sendData(driver, Address2, "NotCairo");
+        Utility.sendData(driver, CountryDropdown, "Egypt");
+        Utility.sendData(driver, State, "IDK");
+        Utility.sendData(driver, City, "Giza");
+        Utility.sendData(driver, Zipcode, "12345");
+        Utility.sendData(driver, MobileNumber, "01001212111");
+        Utility.clickingOnElement(driver, CreateAccountButton);
+        return this;
+    }
 
 }

@@ -37,5 +37,11 @@ public class P02_LoginPage {
         Utility.clickingOnElement(driver, SignupButton);
         return new P03_SignupPage(driver);
     }
+    public P03_SignupPage signUpInLoginPageSteps(){
+        Utility.sendData(driver, Name, "StaticName");
+        Utility.sendData(driver, Email, "Static@gmail13.com");
+        Utility.clickingOnElement(driver, SignupButton);
+        return new P03_SignupPage(driver);
+    }
 
 }

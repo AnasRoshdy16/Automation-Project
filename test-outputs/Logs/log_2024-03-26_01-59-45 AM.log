@@ -1,0 +1,14 @@
+[INFO] 26-03-2024 01:59:45 [main] [Tests.T03_SignupTest.setup(TC03_SignupTest.java:22)] -  Edge Driver is opened
+[INFO] 26-03-2024 01:59:49 [main] [Tests.T03_SignupTest.setup(TC03_SignupTest.java:24)] -  Page is redirected to the URL
+[INFO] 26-03-2024 01:59:49 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case SignupTC started
+[INFO] 26-03-2024 01:59:51 [main] [Tests.T03_SignupTest.SignupTC(TC03_SignupTest.java:35)] - Filling out Credentials
+[INFO] 26-03-2024 01:59:51 [main] [Pages.P02_LoginPage.Entername(P02_LoginPage.java:26)] - Username is added
+[INFO] 26-03-2024 01:59:51 [main] [Pages.P02_LoginPage.Enteremail(P02_LoginPage.java:32)] - email is added
+[INFO] 26-03-2024 01:59:52 [main] [Tests.T03_SignupTest.SignupTC(TC03_SignupTest.java:40)] - Partial Signup
+[INFO] 26-03-2024 01:59:53 [main] [Tests.T03_SignupTest.SignupTC(TC03_SignupTest.java:42)] - Assertion on Account Info Text
+[INFO] 26-03-2024 01:59:57 [main] [Tests.T03_SignupTest.SignupTC(TC03_SignupTest.java:56)] - Assertion on AccountCreation
+[INFO] 26-03-2024 02:00:04 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case SignupTC passed
+[INFO] 26-03-2024 02:00:04 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case deleteAccountTC started
+[INFO] 26-03-2024 02:00:04 [main] [Tests.T03_SignupTest.deleteAccountTC(TC03_SignupTest.java:65)] - Deleting the account started
+[INFO] 26-03-2024 02:00:09 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case deleteAccountTC passed
+[INFO] 26-03-2024 02:00:09 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

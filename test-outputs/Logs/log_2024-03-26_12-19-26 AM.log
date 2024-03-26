@@ -1,10 +1,10 @@
-[INFO] 26-03-2024 00:19:26 [main] [Tests.TC03_SignupTest.setup(TC03_SignupTest.java:27)] -  Edge Driver is opened 
-[INFO] 26-03-2024 00:19:30 [main] [Tests.TC03_SignupTest.setup(TC03_SignupTest.java:29)] -  Page is redirected to the URL 
+[INFO] 26-03-2024 00:19:26 [main] [Tests.T03_SignupTest.setup(TC03_SignupTest.java:27)] -  Edge Driver is opened
+[INFO] 26-03-2024 00:19:30 [main] [Tests.T03_SignupTest.setup(TC03_SignupTest.java:29)] -  Page is redirected to the URL
 [INFO] 26-03-2024 00:19:30 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case SignupTC started
-[INFO] 26-03-2024 00:19:33 [main] [Tests.TC03_SignupTest.SignupTC(TC03_SignupTest.java:40)] - Filling out Credentials
+[INFO] 26-03-2024 00:19:33 [main] [Tests.T03_SignupTest.SignupTC(TC03_SignupTest.java:40)] - Filling out Credentials
 [INFO] 26-03-2024 00:19:33 [main] [Pages.P02_LoginPage.Entername(P02_LoginPage.java:26)] - Username is added
 [INFO] 26-03-2024 00:19:33 [main] [Pages.P02_LoginPage.Enteremail(P02_LoginPage.java:32)] - email is added
-[INFO] 26-03-2024 00:19:37 [main] [Tests.TC03_SignupTest.SignupTC(TC03_SignupTest.java:45)] - Partial Signup
-[INFO] 26-03-2024 00:19:37 [main] [Tests.TC03_SignupTest.SignupTC(TC03_SignupTest.java:47)] - Assertion on Account Info Text
+[INFO] 26-03-2024 00:19:37 [main] [Tests.T03_SignupTest.SignupTC(TC03_SignupTest.java:45)] - Partial Signup
+[INFO] 26-03-2024 00:19:37 [main] [Tests.T03_SignupTest.SignupTC(TC03_SignupTest.java:47)] - Assertion on Account Info Text
 [INFO] 26-03-2024 00:19:38 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case SignupTC passed
 [INFO] 26-03-2024 00:19:40 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed
