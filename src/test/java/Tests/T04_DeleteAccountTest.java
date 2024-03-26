@@ -28,7 +28,8 @@ public class T04_DeleteAccountTest {
     @Test
     public void deleteAccountTC() {
         //Pre-conditions
-        new P01_HomePage(getDriver()).clickOnSignupButton()
+        new P01_HomePage(getDriver())
+                .clickOnSignupButton()
                 .signUpInLoginPageSteps()
                 .signUpSteps();
         new P04_AccountCreatedPage(getDriver()).clickContinueButton();
