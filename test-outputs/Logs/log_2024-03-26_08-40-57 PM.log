@@ -1,0 +1,8 @@
+[INFO] 26-03-2024 20:40:58 [main] [Tests.T02_ValidLoginTest.setup(TC05_ValidLoginTest.java:27)] -  Edge Driver is opened
+[INFO] 26-03-2024 20:41:03 [main] [Tests.T02_ValidLoginTest.setup(TC05_ValidLoginTest.java:29)] -  Page is redirected to the URL
+[INFO] 26-03-2024 20:41:03 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case ValidLoginTC started
+[INFO] 26-03-2024 20:41:06 [main] [Tests.T02_ValidLoginTest.ValidLoginTC(TC05_ValidLoginTest.java:40)] - Filling out Credentials
+[INFO] 26-03-2024 20:41:06 [main] [Pages.P02_LoginPage.EnterLoginEmail(P02_LoginPage.java:47)] - email is added
+[INFO] 26-03-2024 20:41:06 [main] [Pages.P02_LoginPage.EnterPassword(P02_LoginPage.java:53)] - email is added
+[INFO] 26-03-2024 20:41:11 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case ValidLoginTC passed
+[INFO] 26-03-2024 20:41:12 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

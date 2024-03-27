@@ -4,6 +4,7 @@ import Listeners.IInvokedMethodListenerClass;
 import Listeners.ITestResultListenerClass;
 import Pages.P01_HomePage;
 import Pages.P02_LoginPage;
+import Pages.P05_DeleteAccountPage;
 import Utilities.LogsUtils;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -19,7 +20,7 @@ import static Utilities.DataUtils.getJsonData;
 import static Utilities.DataUtils.getPropertyValue;
 
 @Listeners({IInvokedMethodListenerClass.class, ITestResultListenerClass.class})
-public class T02_LoginTest {
+public class T02_ValidLoginTest {
     @BeforeMethod
     public void setup() throws IOException {
         setupDriver(getPropertyValue("environment", "Browser"));
@@ -31,16 +32,22 @@ public class T02_LoginTest {
     }
 
     @Test
-    public void SignupTC() {
+    public void ValidLoginTC() {
 
         new P01_HomePage(getDriver()).clickOnSignupButton();
         //Asserting signup text visibility
-        Assert.assertTrue(new P02_LoginPage(getDriver()).NewSignupVisibility());
+        Assert.assertTrue(new P02_LoginPage(getDriver()).LoginToYourAccountVisibility());
         LogsUtils.info("Filling out Credentials");
+        //PreCondition-entering Valid Pre-Registered Email & Password
         new P02_LoginPage(getDriver())
-                .Entername(getJsonData("SignupInformation", "Name"))
-                .Enteremail(getJsonData("SignupInformation", "Email"))
-                .clickOnSignupButton();
+                .EnterLoginEmail(getJsonData("SignupInformation", "ValidEmail"))
+                .EnterPassword(getJsonData("SignupInformation", "ValidPassword"))
+                .clickOnLoginButton();
+        //Asserting that the user is successfully Logged
+        Assert.assertTrue(new P01_HomePage(getDriver()).loggedInVisibility());
+        //Assertion on Account Deletion
+        new P01_HomePage(getDriver()).clickDeleteAccount();
+        Assert.assertTrue(new P05_DeleteAccountPage(getDriver()).AccountDeletedMsgVisibility());
     }
 
 
@@ -49,4 +56,5 @@ public class T02_LoginTest {
         quitDriver();
     }
 }
+
 

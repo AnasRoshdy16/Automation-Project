@@ -1,4 +1,8 @@
 {
-  "Name": "User",
-  "Email": "AA@aa12300.com"
+  "Name": "StaticName",
+  "ValidEmail": "Static@gmail14.com",
+  "ValidPassword": "Test1234",
+  "TrialEmail": "Static@gmail15.com",
+  "InvalidEmail": "Anashry47@gmail.com",
+  "InValidPassword": "12311"
 }

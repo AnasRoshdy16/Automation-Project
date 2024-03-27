@@ -3,6 +3,7 @@ package Tests;
 import Listeners.IInvokedMethodListenerClass;
 import Listeners.ITestResultListenerClass;
 import Pages.P01_HomePage;
+import Pages.P02_LoginPage;
 import Utilities.LogsUtils;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -14,12 +15,11 @@ import java.io.IOException;
 import java.time.Duration;
 
 import static DriverFactory.DriverFactory.*;
+import static Utilities.DataUtils.getJsonData;
 import static Utilities.DataUtils.getPropertyValue;
 
 @Listeners({IInvokedMethodListenerClass.class, ITestResultListenerClass.class})
-public class T01_HomeTest {
-
-
+public class T03_InvalidLoginTest {
     @BeforeMethod
     public void setup() throws IOException {
         setupDriver(getPropertyValue("environment", "Browser"));
@@ -31,18 +31,27 @@ public class T01_HomeTest {
     }
 
     @Test
+    public void InValidLoginTC() {
 
-    public void VerifyGoToLoginPageTC() {
         Assert.assertTrue(new P01_HomePage(getDriver()).HomeButtonVisibility());
+        new P01_HomePage(getDriver()).clickOnSignupButton();
+        //Asserting signup text visibility
+        Assert.assertTrue(new P02_LoginPage(getDriver()).LoginToYourAccountVisibility());
+        LogsUtils.info("Filling out Credentials");
+        //PreCondition-entering Invalid Email & Password (Try Using the account deleted in the valid TC)
+        new P02_LoginPage(getDriver())
+                .EnterLoginEmail(getJsonData("SignupInformation", "InvalidEmail"))
+                .EnterPassword(getJsonData("SignupInformation", "InValidPassword"))
+                .clickOnLoginButton();
+        //Asserting that the user is Incorrect
+        Assert.assertTrue(new P02_LoginPage(getDriver()).IncorrectUsernameOrPasswordVisibility());
+
     }
 
-    @Test
-    public void clickOnSignupButtonTC() {
-        new P01_HomePage(getDriver()).clickOnSignupButton();
-    }
 
     @AfterMethod
     public void quit() {
         quitDriver();
     }
 }
+

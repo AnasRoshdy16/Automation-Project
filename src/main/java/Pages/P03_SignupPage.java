@@ -62,11 +62,13 @@ public class P03_SignupPage {
     }
 
     public P03_SignupPage ClickNewsLetterCheckbox() {
+        Utility.scrolling(driver, NewsletterCheckBox);
         Utility.clickingOnElement(driver, NewsletterCheckBox);
         return this;
     }
 
     public P03_SignupPage ClickSpecialOffersCheckbox() {
+        Utility.scrolling(driver, SpecialOffersCheckBox);
         Utility.clickingOnElement(driver, SpecialOffersCheckBox);
         return this;
     }
@@ -122,27 +124,32 @@ public class P03_SignupPage {
     }
 
     public P04_AccountCreatedPage clickCreateAccountButton() {
+        Utility.scrolling(driver, CreateAccountButton);
         Utility.clickingOnElement(driver, CreateAccountButton);
         return new P04_AccountCreatedPage(driver);
     }
-    public P03_SignupPage signUpSteps(){
+
+    public P03_SignupPage signUpSteps() {
         Utility.clickingOnElement(driver, TitleButton);
         Utility.sendData(driver, PasswordLane, "Test1234");
         Utility.sendData(driver, DaysDropdown, "2");
         Utility.sendData(driver, MonthsDropdown, "February");
         Utility.sendData(driver, YearsDropdown, "1994");
+        Utility.scrolling(driver, NewsletterCheckBox);
         Utility.clickingOnElement(driver, NewsletterCheckBox);
+        Utility.scrolling(driver, SpecialOffersCheckBox);
         Utility.clickingOnElement(driver, SpecialOffersCheckBox);
         Utility.sendData(driver, FirstName, "Ammar");
         Utility.sendData(driver, LastName, "Elfeky");
         Utility.sendData(driver, Company, "Jobless");
         Utility.sendData(driver, Address1, "Cairo");
         Utility.sendData(driver, Address2, "NotCairo");
-        Utility.sendData(driver, CountryDropdown, "Egypt");
+        Utility.sendData(driver, CountryDropdown, "Canada");
         Utility.sendData(driver, State, "IDK");
         Utility.sendData(driver, City, "Giza");
         Utility.sendData(driver, Zipcode, "12345");
         Utility.sendData(driver, MobileNumber, "01001212111");
+        Utility.scrolling(driver, CreateAccountButton);
         Utility.clickingOnElement(driver, CreateAccountButton);
         return this;
     }

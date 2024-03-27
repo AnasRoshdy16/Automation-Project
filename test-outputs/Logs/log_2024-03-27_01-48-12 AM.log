@@ -1,0 +1,7 @@
+[INFO] 27-03-2024 01:48:12 [main] [Tests.T04_LogoutTest.setup(T04_LogoutTest.java:30)] -  Edge Driver is opened 
+[INFO] 27-03-2024 01:48:15 [main] [Tests.T04_LogoutTest.setup(T04_LogoutTest.java:32)] -  Page is redirected to the URL 
+[INFO] 27-03-2024 01:48:16 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case LogoutTC started
+[INFO] 27-03-2024 01:48:19 [main] [Tests.T04_LogoutTest.LogoutTC(T04_LogoutTest.java:41)] - Filling out Credentials
+[INFO] 27-03-2024 01:48:20 [main] [Pages.P02_LoginPage.EnterLoginEmail(P02_LoginPage.java:52)] - email is added
+[INFO] 27-03-2024 01:48:20 [main] [Pages.P02_LoginPage.EnterPassword(P02_LoginPage.java:58)] - email is added
+[INFO] 27-03-2024 01:48:22 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case LogoutTC passed
