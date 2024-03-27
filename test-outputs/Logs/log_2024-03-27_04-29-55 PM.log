@@ -1,0 +1,5 @@
+[INFO] 27-03-2024 16:29:56 [main] [Tests.T06_ProductSearch.setup(T06_ProductSearch.java:29)] -  Edge Driver is opened 
+[INFO] 27-03-2024 16:29:59 [main] [Tests.T06_ProductSearch.setup(T06_ProductSearch.java:31)] -  Page is redirected to the URL 
+[INFO] 27-03-2024 16:30:00 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case SearchProductTC started
+[INFO] 27-03-2024 16:30:06 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case SearchProductTC passed
+[INFO] 27-03-2024 16:30:08 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

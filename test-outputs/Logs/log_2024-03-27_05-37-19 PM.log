@@ -1,0 +1,5 @@
+[INFO] 27-03-2024 17:37:20 [main] [Tests.T05_ProductVerfication.setup(T05_ProductVerfication.java:27)] -  Edge Driver is opened 
+[INFO] 27-03-2024 17:37:24 [main] [Tests.T05_ProductVerfication.setup(T05_ProductVerfication.java:29)] -  Page is redirected to the URL 
+[INFO] 27-03-2024 17:37:24 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case VerifyProductDetailsTC started
+[INFO] 27-03-2024 17:37:32 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case VerifyProductDetailsTC passed
+[INFO] 27-03-2024 17:37:34 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed
