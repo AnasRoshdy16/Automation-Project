@@ -34,12 +34,15 @@ public class P01_HomePage {
         Utility.clickingOnElement(driver, deleteAccountButton);
         return new P05_DeleteAccountPage(driver);
     }
+
     public P02_LoginPage clickOnLogoutButton() {
         Utility.clickingOnElement(driver, logoutButton);
         return new P02_LoginPage(driver);
     }
+
     public P06_ProductsPage clickOnProductsButton() {
         Utility.clickingOnElement(driver, productsButton);
+        Utility.closeAdByRefreshing(driver, productsButton);
         return new P06_ProductsPage(driver);
     }
 

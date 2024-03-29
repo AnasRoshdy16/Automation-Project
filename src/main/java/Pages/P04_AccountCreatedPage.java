@@ -19,6 +19,7 @@ public class P04_AccountCreatedPage {
 
     public P01_HomePage clickContinueButton() {
         Utility.clickingOnElement(driver, continueButton);
+        Utility.closeAdByRefreshing(driver, continueButton);
         return new P01_HomePage(driver);
     }
 }

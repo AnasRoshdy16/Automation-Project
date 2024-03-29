@@ -1,0 +1,11 @@
+[INFO] 29-03-2024 14:19:17 [main] [Tests.T06_ProductSearch.setup(T06_ProductSearch.java:26)] -  Edge Driver is opened 
+[INFO] 29-03-2024 14:19:20 [main] [Tests.T06_ProductSearch.setup(T06_ProductSearch.java:28)] -  Page is redirected to the URL 
+[INFO] 29-03-2024 14:19:20 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case SearchProductTC started
+[INFO] 29-03-2024 14:19:35 [main] [Pages.P06_ProductsPage.searchedProductsVisibility(P06_ProductsPage.java:54)] - Visibility of item number:1
+[INFO] 29-03-2024 14:19:35 [main] [Pages.P06_ProductsPage.searchedProductsVisibility(P06_ProductsPage.java:54)] - Visibility of item number:2
+[INFO] 29-03-2024 14:19:35 [main] [Pages.P06_ProductsPage.searchedProductsVisibility(P06_ProductsPage.java:54)] - Visibility of item number:3
+[INFO] 29-03-2024 14:19:35 [main] [Pages.P06_ProductsPage.searchedProductsVisibility(P06_ProductsPage.java:54)] - Visibility of item number:4
+[INFO] 29-03-2024 14:19:35 [main] [Pages.P06_ProductsPage.searchedProductsVisibility(P06_ProductsPage.java:54)] - Visibility of item number:5
+[INFO] 29-03-2024 14:19:35 [main] [Pages.P06_ProductsPage.searchedProductsVisibility(P06_ProductsPage.java:54)] - Visibility of item number:6
+[INFO] 29-03-2024 14:19:35 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case SearchProductTC passed
+[INFO] 29-03-2024 14:19:37 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed
