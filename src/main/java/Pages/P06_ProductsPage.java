@@ -18,7 +18,7 @@ public class P06_ProductsPage {
     private final By productsSearch = By.xpath("//input[@name='search']");
     private final By searchButton = By.xpath("//button[@id='submit_search']");
     private final By menTshirtTextInProduct = By.xpath("(//p[.='Men Tshirt'])[1]");
-    private final By viewProduct = By.xpath("//a[@href='/product_details/2']");
+    private final By viewProductMenTshirt = By.xpath("//a[@href='/product_details/2']");
     private final By addToCartProduct1Button = By.xpath("(//a[@data-product-id='1'])[1]");
     private final By addToCartProduct2Button = By.xpath("(//a[@data-product-id='2'])[1]");
     private final By continueShoppingButton = By.xpath("//button[@class='btn btn-success close-modal btn-block']");
@@ -62,9 +62,9 @@ public class P06_ProductsPage {
         return new P08_ViewCartPage(driver);
     }
 
-    public P07_ProductDetails clickOnViewProduct() {
-        Utility.scrolling(driver, viewProduct);
-        Utility.clickingOnElement(driver, viewProduct);
+    public P07_ProductDetails clickOnViewProductOnMenTshirt() {
+        Utility.scrolling(driver, viewProductMenTshirt);
+        Utility.clickingOnElement(driver, viewProductMenTshirt);
         return new P07_ProductDetails(driver);
     }
 

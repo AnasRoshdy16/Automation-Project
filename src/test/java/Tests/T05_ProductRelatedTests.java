@@ -22,6 +22,8 @@ import static Utilities.DataUtils.getPropertyValue;
 
 @Listeners({IInvokedMethodListenerClass.class, ITestResultListenerClass.class})
 public class T05_ProductRelatedTests {
+
+    String QUANTITY = "4";
     @BeforeMethod
     public void setup() throws IOException {
         setupDriver(getPropertyValue("environment", "Browser"));
@@ -40,7 +42,7 @@ public class T05_ProductRelatedTests {
         Assert.assertTrue(new P06_ProductsPage(getDriver()).allProductsVisibility());
         // Click on 'View Product' of first product
         new P06_ProductsPage(getDriver())
-                .clickOnViewProduct();
+                .clickOnViewProductOnMenTshirt();
         // Verify that product details are visible
         Assert.assertTrue(new P07_ProductDetails(getDriver()).productInformationVisibility());
     }
@@ -78,6 +80,18 @@ public class T05_ProductRelatedTests {
         Assert.assertTrue(new P08_ViewCartPage(getDriver()).product1TotalVisibility());
         Assert.assertTrue(new P08_ViewCartPage(getDriver()).comparingProduct1TotalPrices());
 
+
+    }
+    @Test(priority = 4)
+    public void VerifyProductQuantity(){
+        // Click 'View Product' for any product on home page
+        new P06_ProductsPage(getDriver()).clickOnViewProductOnMenTshirt()
+                .increaseQuantity(QUANTITY)
+                .clickAddToCartButton()
+                .clickViewCartButton();
+        // Verify that product is displayed in cart page with exact quantity
+        LogsUtils.info("Product Quantity is: " + new P08_ViewCartPage(getDriver()).getProductQuantity());
+        Assert.assertEquals(QUANTITY,new P08_ViewCartPage(getDriver()).getProductQuantity());
 
     }
 

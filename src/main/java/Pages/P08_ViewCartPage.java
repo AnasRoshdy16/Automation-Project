@@ -66,6 +66,9 @@ public class P08_ViewCartPage {
         LogsUtils.info("Comparing the product total price with the calculated total");
         return getProduct1TotalPrice().equals(calculateProduct1TotalPrice());
     }
+    public String getProductQuantity(){
+        return Utility.getText(driver,product1Quantity);
+    }
 
 
 }

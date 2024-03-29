@@ -109,6 +109,12 @@ public class Utility {
         }
         return true;
     }
+    public static void clear(WebDriver driver, By locator){
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(locator));
+        driver.findElement(locator).clear();
+
+    }
 
     public static boolean checkVisibility(WebDriver driver, By locator) {
 
