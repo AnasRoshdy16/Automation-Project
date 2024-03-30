@@ -1,0 +1,5 @@
+[INFO] 30-03-2024 17:23:33 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:28)] -  Edge Driver is opened 
+[INFO] 30-03-2024 17:23:37 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:30)] -  Page is redirected to the URL 
+[INFO] 30-03-2024 17:23:38 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case ViewCategoryProductsTC started
+[INFO] 30-03-2024 17:23:42 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:19)] - Test Case ViewCategoryProductsTC failed
+[INFO] 30-03-2024 17:23:45 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

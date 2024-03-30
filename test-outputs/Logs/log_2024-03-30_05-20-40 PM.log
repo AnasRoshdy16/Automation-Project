@@ -1,0 +1,11 @@
+[INFO] 30-03-2024 17:20:41 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:28)] -  Edge Driver is opened 
+[INFO] 30-03-2024 17:20:44 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:30)] -  Page is redirected to the URL 
+[INFO] 30-03-2024 17:20:44 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case ViewCategoryProductsTC started
+[ERROR] 30-03-2024 17:20:55 [main] [Utilities.Utility.closeAdByRefreshing(Utility.java:142)] - Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href='/category_products/1'] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 122.0.2365.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:51575}, msedge: {msedgedriverVersion: 122.0.2365.113 (9bf34bfff1f..., userDataDir: C:\Users\Anas\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51575/devtoo..., se:cdpVersion: 122.0.2365.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5f9152940ef25855f622d18832543c11
+[INFO] 30-03-2024 17:21:00 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case ViewCategoryProductsTC passed
+[INFO] 30-03-2024 17:21:01 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

@@ -1,0 +1,7 @@
+[INFO] 30-03-2024 16:01:25 [main] [Tests.T06_CheckoutRelatedTests.setup(T06_CheckoutRelatedTests.java:27)] -  Edge Driver is opened 
+[INFO] 30-03-2024 16:01:29 [main] [Tests.T06_CheckoutRelatedTests.setup(T06_CheckoutRelatedTests.java:29)] -  Page is redirected to the URL 
+[INFO] 30-03-2024 16:01:29 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case LoginBeforeCheckoutTC started
+[INFO] 30-03-2024 16:01:32 [main] [Pages.P02_LoginPage.EnterLoginEmail(P02_LoginPage.java:52)] - email is added
+[INFO] 30-03-2024 16:01:33 [main] [Pages.P02_LoginPage.EnterPassword(P02_LoginPage.java:58)] - password is added
+[INFO] 30-03-2024 16:01:42 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:19)] - Test Case LoginBeforeCheckoutTC failed
+[INFO] 30-03-2024 16:01:44 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

@@ -2,10 +2,7 @@ package Tests;
 
 import Listeners.IInvokedMethodListenerClass;
 import Listeners.ITestResultListenerClass;
-import Pages.P01_HomePage;
-import Pages.P06_ProductsPage;
-import Pages.P07_ProductDetails;
-import Pages.P08_ViewCartPage;
+import Pages.*;
 import Utilities.LogsUtils;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -24,6 +21,7 @@ import static Utilities.DataUtils.getPropertyValue;
 public class T05_ProductRelatedTests {
 
     String QUANTITY = "4";
+
     @BeforeMethod
     public void setup() throws IOException {
         setupDriver(getPropertyValue("environment", "Browser"));
@@ -82,8 +80,9 @@ public class T05_ProductRelatedTests {
 
 
     }
+
     @Test(priority = 4)
-    public void VerifyProductQuantity(){
+    public void VerifyProductQuantityTC() {
         // Click 'View Product' for any product on home page
         new P06_ProductsPage(getDriver()).clickOnViewProductOnMenTshirt()
                 .increaseQuantity(QUANTITY)
@@ -91,7 +90,24 @@ public class T05_ProductRelatedTests {
                 .clickViewCartButton();
         // Verify that product is displayed in cart page with exact quantity
         LogsUtils.info("Product Quantity is: " + new P08_ViewCartPage(getDriver()).getProductQuantity());
-        Assert.assertEquals(QUANTITY,new P08_ViewCartPage(getDriver()).getProductQuantity());
+        Assert.assertEquals(QUANTITY, new P08_ViewCartPage(getDriver()).getProductQuantity());
+
+    }
+
+    @Test(priority = 5)
+    public void ViewCategoryProductsTC() {
+        // Asserting That categories are visible
+        Assert.assertTrue(new P01_HomePage(getDriver()).CategoryVisibility());
+        // Choosing dress in Women's category
+        new P01_HomePage(getDriver()).clickOnWomenCategoryButton()
+                .clickOnDressInWomenCategoryButton();
+        // Asserting WOMEN - TOPS PRODUCTS is visible
+        Assert.assertTrue(new P12_CategoryProductsPage(getDriver()).womenDressProductsTitleVisibility());
+        // Choosing T-shirts in Men's category
+        new P12_CategoryProductsPage(getDriver()).clickOnMenCategoryButton()
+                .clickOnTshirtInCategoryButton();
+        // Asserting landing in the category page
+        Assert.assertTrue(new P12_CategoryProductsPage(getDriver()).VerifyCategoryPageUrl());
 
     }
 

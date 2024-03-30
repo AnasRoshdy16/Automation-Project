@@ -13,6 +13,7 @@ public class P08_ViewCartPage {
     private final By product1PriceLocator = By.xpath("//td[@class='cart_price']//p[.='Rs. 500']");
     private final By product1Quantity = By.xpath("(//button[@class='disabled'])[1]");
     private final By product1TotalLocator = By.xpath("//td[@class='cart_total']//p[.='Rs. 500']");
+    private final By proceedToCheckoutButton = By.xpath("//a[@class='btn btn-default check_out']");
     public Float price1Total;
 
     public P08_ViewCartPage(WebDriver driver) {
@@ -66,8 +67,14 @@ public class P08_ViewCartPage {
         LogsUtils.info("Comparing the product total price with the calculated total");
         return getProduct1TotalPrice().equals(calculateProduct1TotalPrice());
     }
-    public String getProductQuantity(){
-        return Utility.getText(driver,product1Quantity);
+
+    public String getProductQuantity() {
+        return Utility.getText(driver, product1Quantity);
+    }
+
+    public P09_CheckoutPage clickProceedToCheckout() {
+        Utility.clickingOnElement(driver, proceedToCheckoutButton);
+        return new P09_CheckoutPage(driver);
     }
 
 
