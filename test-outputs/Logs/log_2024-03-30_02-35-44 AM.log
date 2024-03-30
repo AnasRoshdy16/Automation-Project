@@ -1,0 +1,6 @@
+[INFO] 30-03-2024 02:35:45 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:30)] -  Edge Driver is opened 
+[INFO] 30-03-2024 02:35:48 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:32)] -  Page is redirected to the URL 
+[INFO] 30-03-2024 02:35:48 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case VerifyProductQuantity started
+[INFO] 30-03-2024 02:35:59 [main] [Tests.T05_ProductRelatedTests.VerifyProductQuantity(T05_ProductRelatedTests.java:93)] - Product Quantity is: 4
+[INFO] 30-03-2024 02:35:59 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case VerifyProductQuantity passed
+[INFO] 30-03-2024 02:36:00 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

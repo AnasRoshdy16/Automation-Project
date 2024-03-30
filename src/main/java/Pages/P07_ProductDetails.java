@@ -12,23 +12,27 @@ public class P07_ProductDetails {
     private final By viewCartButton = By.xpath("(//a[@href='/view_cart'])[2]");
 
     public P07_ProductDetails(WebDriver driver) {
-        this.driver=driver;
+        this.driver = driver;
     }
 
-    public boolean productInformationVisibility(){
-        return Utility.checkVisibility(driver,productInformation);
+    public boolean productInformationVisibility() {
+        return Utility.checkVisibility(driver, productInformation);
     }
-    public P07_ProductDetails increaseQuantity(String quantityValue){
-        Utility.clear(driver,quantity);
-        Utility.sendData(driver,quantity,quantityValue);
+
+    public P07_ProductDetails increaseQuantity(String quantityValue) {
+        Utility.closeAdByRefreshing(driver, quantity);
+        Utility.clear(driver, quantity);
+        Utility.sendData(driver, quantity, quantityValue);
         return this;
     }
-    public P07_ProductDetails clickAddToCartButton(){
-        Utility.clickingOnElement(driver,addToCartButton);
+
+    public P07_ProductDetails clickAddToCartButton() {
+        Utility.clickingOnElement(driver, addToCartButton);
         return this;
     }
-    public P08_ViewCartPage clickViewCartButton(){
-        Utility.clickingOnElement(driver,viewCartButton);
+
+    public P08_ViewCartPage clickViewCartButton() {
+        Utility.clickingOnElement(driver, viewCartButton);
         return new P08_ViewCartPage(driver);
     }
 }

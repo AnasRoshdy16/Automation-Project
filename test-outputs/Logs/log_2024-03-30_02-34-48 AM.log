@@ -1,0 +1,21 @@
+[INFO] 30-03-2024 02:34:49 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:30)] -  Edge Driver is opened 
+[INFO] 30-03-2024 02:34:53 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:32)] -  Page is redirected to the URL 
+[INFO] 30-03-2024 02:34:54 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case VerifyProductQuantity started
+[ERROR] 30-03-2024 02:34:56 [main] [Utilities.Utility.closeAdByRefreshing(Utility.java:142)] - stale element reference: stale element not found
+  (Session info: MicrosoftEdge=122.0.2365.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [cc08d1f4e8d77269369a904b358bcf9e, clickElement {id=f.0F4AA3DE6D802C6CEB314929E2346008.d.4145BAADC96FA7AC5C2B15A450B73A8C.e.444}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 122.0.2365.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58184}, msedge: {msedgedriverVersion: 122.0.2365.113 (9bf34bfff1f..., userDataDir: C:\Users\Anas\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58184/devtoo..., se:cdpVersion: 122.0.2365.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (cc08d1f4e8d77269369a904b358bcf9e)] -> xpath: //a[@href='/product_details/2']]
+Session ID: cc08d1f4e8d77269369a904b358bcf9e
+[ERROR] 30-03-2024 02:35:09 [main] [Utilities.Utility.closeAdByRefreshing(Utility.java:142)] - Expected condition failed: waiting for element to be clickable: By.xpath: //input[@name='quantity'] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 122.0.2365.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58184}, msedge: {msedgedriverVersion: 122.0.2365.113 (9bf34bfff1f..., userDataDir: C:\Users\Anas\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58184/devtoo..., se:cdpVersion: 122.0.2365.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cc08d1f4e8d77269369a904b358bcf9e
+[INFO] 30-03-2024 02:35:19 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:19)] - Test Case VerifyProductQuantity failed
+[INFO] 30-03-2024 02:35:21 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

@@ -65,6 +65,7 @@ public class P06_ProductsPage {
     public P07_ProductDetails clickOnViewProductOnMenTshirt() {
         Utility.scrolling(driver, viewProductMenTshirt);
         Utility.clickingOnElement(driver, viewProductMenTshirt);
+        Utility.closeAdByRefreshing(driver, viewProductMenTshirt);
         return new P07_ProductDetails(driver);
     }
 
