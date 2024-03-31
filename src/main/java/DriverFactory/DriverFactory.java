@@ -8,6 +8,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.HashMap;
+
 public class DriverFactory {
         private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
@@ -26,6 +28,9 @@ public class DriverFactory {
                 default:
                     EdgeOptions options = new EdgeOptions();
                     options.addArguments("--start-maximized");
+                    HashMap<String, Object> hashMap = new HashMap<>();
+                    hashMap.put("download.default_directory","test-outputs/Invoices");
+                    options.setExperimentalOption("pref",hashMap);
                     driverThreadLocal.set(new EdgeDriver(options));
             }
 
