@@ -23,6 +23,8 @@ public class P06_ProductsPage {
     private final By addToCartProduct2Button = By.xpath("(//a[@data-product-id='2'])[1]");
     private final By continueShoppingButton = By.xpath("//button[@class='btn btn-success close-modal btn-block']");
     private final By cartButton = By.xpath("(//a[@href='/view_cart'])[1]");
+    private final By HnMBrand = By.xpath("//a[@href='/brand_products/H&M']");
+    private final By babyHugBrand = By.xpath("//a[@href='/brand_products/Babyhug']");
 
 
     public P06_ProductsPage(WebDriver driver) {
@@ -85,5 +87,9 @@ public class P06_ProductsPage {
             }
         }
         return true;
+    }
+    public P13_BrandsProductsPage clickOnHnMBrand(){
+        Utility.clickingOnElement(driver,HnMBrand);
+        return new P13_BrandsProductsPage(driver);
     }
 }

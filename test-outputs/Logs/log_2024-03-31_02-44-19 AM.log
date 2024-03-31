@@ -1,0 +1,5 @@
+[INFO] 31-03-2024 02:44:19 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:28)] -  Edge Driver is opened 
+[INFO] 31-03-2024 02:44:22 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:30)] -  Page is redirected to the URL 
+[INFO] 31-03-2024 02:44:22 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case ViewCartBrandProducts started
+[INFO] 31-03-2024 02:44:39 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case ViewCartBrandProducts passed
+[INFO] 31-03-2024 02:44:41 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed
