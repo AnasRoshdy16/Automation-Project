@@ -18,8 +18,8 @@ public class P03_SignupPage {
     private final By FirstName = By.id("first_name");
     private final By LastName = By.id("last_name");
     private final By Company = By.id("company");
-    private final By Address1 = By.id("address1");
-    private final By Address2 = By.id("address2");
+    private final By DeliveryAddress = By.id("address1");
+    private final By BillingAddress = By.id("address2");
     private final By CountryDropdown = By.id("country");
     private final By State = By.id("state");
     private final By City = By.id("city");
@@ -89,12 +89,12 @@ public class P03_SignupPage {
     }
 
     public P03_SignupPage EnterAddress1Name(String Address1nameText) {
-        Utility.sendData(driver, Address1, Address1nameText);
+        Utility.sendData(driver, DeliveryAddress, Address1nameText);
         return this;
     }
 
     public P03_SignupPage EnterAddress2Name(String Address2nameText) {
-        Utility.sendData(driver, Address2, Address2nameText);
+        Utility.sendData(driver, BillingAddress, Address2nameText);
         return this;
     }
 
@@ -142,8 +142,8 @@ public class P03_SignupPage {
         Utility.sendData(driver, FirstName, "Ammar");
         Utility.sendData(driver, LastName, "Elfeky");
         Utility.sendData(driver, Company, "Jobless");
-        Utility.sendData(driver, Address1, "Cairo");
-        Utility.sendData(driver, Address2, "NotCairo");
+        Utility.sendData(driver, DeliveryAddress, "Cairo");
+        Utility.sendData(driver, BillingAddress, "NotCairo");
         Utility.sendData(driver, CountryDropdown, "Canada");
         Utility.sendData(driver, State, "IDK");
         Utility.sendData(driver, City, "Giza");

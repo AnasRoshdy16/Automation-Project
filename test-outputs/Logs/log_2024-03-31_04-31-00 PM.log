@@ -1,0 +1,6 @@
+[INFO] 31-03-2024 16:31:00 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:28)] -  Edge Driver is opened 
+[INFO] 31-03-2024 16:31:05 [main] [Tests.T05_ProductRelatedTests.setup(T05_ProductRelatedTests.java:30)] -  Page is redirected to the URL 
+[INFO] 31-03-2024 16:31:05 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case ViewCartBrandProducts started
+[INFO] 31-03-2024 16:31:13 [main] [Tests.T05_ProductRelatedTests.ViewCartBrandProducts(T05_ProductRelatedTests.java:119)] - Clicking on H&M Brand
+[INFO] 31-03-2024 16:31:17 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case ViewCartBrandProducts passed
+[INFO] 31-03-2024 16:31:19 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:41)] -  The browser is closed

@@ -110,11 +110,13 @@ public class T05_ProductRelatedTests {
         Assert.assertTrue(new P12_CategoryProductsPage(getDriver()).VerifyCategoryPageUrl());
 
     }
-    @Test
-    public void ViewCartBrandProducts(){
+
+    @Test(priority = 6)
+    public void ViewCartBrandProducts() {
         // Click on 'Products' button
         new P01_HomePage(getDriver()).clickOnProductsButton();
         // Click on H&M brand
+        LogsUtils.info("Clicking on H&M Brand");
         new P06_ProductsPage(getDriver()).clickOnHnMBrand();
         // Verify that user is navigated to H&M page and H&M products are displayed
         Assert.assertTrue(new P13_BrandsProductsPage(getDriver()).HnMTextVisibility());

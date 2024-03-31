@@ -62,6 +62,27 @@ public class T06_CheckoutRelatedTests {
 
     }
 
+    @Test
+    public void VerifyAddressDetailsInCheckoutTC() {
+
+        new P01_HomePage(getDriver()).clickOnSignupButton();
+        new P02_LoginPage(getDriver())
+                .EnterLoginEmail(getJsonData("SignupInformation", "ValidEmail"))
+                .EnterPassword(getJsonData("SignupInformation", "ValidPassword"))
+                .clickOnLoginButton();
+        new P01_HomePage(getDriver()).clickOnProductsButton()
+                // Adding First two products in the cart
+                .addingFirstProductToCart()
+                .addingSecondProductToCart()
+                // Clicking on cart button to view cart page
+                .clickViewCartButton()
+                //Clicking the proceed to Checkout Button
+                .clickProceedToCheckout();
+        //Comparing Addresses
+        Assert.assertTrue(new P09_CheckoutPage(getDriver()).ComparingDeliveryAddresses());
+        Assert.assertTrue(new P09_CheckoutPage(getDriver()).ComparingBillingAddresses());
+    }
+
 
     @AfterMethod
     public void quit() {
