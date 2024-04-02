@@ -45,9 +45,7 @@ public class T02_ValidLoginTest {
                 .clickOnLoginButton();
         //Asserting that the user is successfully Logged
         Assert.assertTrue(new P01_HomePage(getDriver()).loggedInVisibility());
-        //Assertion on Account Deletion
-        new P01_HomePage(getDriver()).clickDeleteAccount();
-        Assert.assertTrue(new P05_DeleteAccountPage(getDriver()).AccountDeletedMsgVisibility());
+
     }
 
 

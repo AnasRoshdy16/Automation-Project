@@ -1,0 +1,10 @@
+[INFO] 02-04-2024 17:06:12 [main] [DriverFactory.DriverFactory.setupDriver(DriverFactory.java:33)] - C:\Users\ammar\OneDrive\IntelliJ_projects\Automation-Project
+[INFO] 02-04-2024 17:06:21 [main] [Tests.T02_ValidLoginTest.setup(T02_ValidLoginTest.java:27)] -  Edge Driver is opened 
+[INFO] 02-04-2024 17:06:24 [main] [Tests.T02_ValidLoginTest.setup(T02_ValidLoginTest.java:29)] -  Page is redirected to the URL 
+[INFO] 02-04-2024 17:06:25 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case ValidLoginTC started
+[INFO] 02-04-2024 17:06:27 [main] [Tests.T02_ValidLoginTest.ValidLoginTC(T02_ValidLoginTest.java:40)] - Filling out Credentials
+[INFO] 02-04-2024 17:06:27 [main] [Pages.P02_LoginPage.EnterLoginEmail(P02_LoginPage.java:52)] - email is added
+[INFO] 02-04-2024 17:06:28 [main] [Pages.P02_LoginPage.EnterPassword(P02_LoginPage.java:58)] - password is added
+[INFO] 02-04-2024 17:06:41 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:19)] - Test Case ValidLoginTC failed
+[INFO] 02-04-2024 17:06:44 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:50)] -  The browser is closed
+[INFO] 02-04-2024 17:06:44 [main] [DriverFactory.DriverFactory.setupDriver(DriverFactory.java:33)] - C:\Users\ammar\OneDrive\IntelliJ_projects\Automation-Project

@@ -55,6 +55,7 @@ public class P09_CheckoutPage {
     }
 
     public P10_PaymentPage placingOrder() {
+        Utility.scrolling(driver, placeOrderButton);
         Utility.clickingOnElement(driver, placeOrderButton);
         return new P10_PaymentPage(driver);
     }
