@@ -1,0 +1,12 @@
+[INFO] 02-04-2024 16:44:12 [main] [DriverFactory.DriverFactory.setupDriver(DriverFactory.java:33)] - C:\Users\ammar\OneDrive\IntelliJ_projects\Automation-Project
+[INFO] 02-04-2024 16:44:17 [main] [Tests.T06_CheckoutRelatedTests.setup(T06_CheckoutRelatedTests.java:26)] -  Edge Driver is opened 
+[INFO] 02-04-2024 16:44:22 [main] [Tests.T06_CheckoutRelatedTests.setup(T06_CheckoutRelatedTests.java:28)] -  Page is redirected to the URL 
+[INFO] 02-04-2024 16:44:22 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case DownloadInvoiceAfterPurchaseOrderTC started
+[ERROR] 02-04-2024 16:44:53 [main] [Utilities.Utility.closeAdByRefreshing(Utility.java:142)] - Expected condition failed: waiting for element to be clickable: By.xpath: //input[@class='form-control'] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58487}, msedge: {msedgedriverVersion: 123.0.2420.65 (49b6a5859239..., userDataDir: C:\Users\ammar\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58487/devtoo..., se:cdpVersion: 123.0.2420.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: edd3d3136cd6bf8d68dc62ae6a885a4a
+[INFO] 02-04-2024 16:45:03 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:19)] - Test Case DownloadInvoiceAfterPurchaseOrderTC failed
+[INFO] 02-04-2024 16:45:05 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:50)] -  The browser is closed

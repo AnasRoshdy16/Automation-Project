@@ -1,6 +1,7 @@
 package DriverFactory;
 
 import Utilities.LogsUtils;
+import Utilities.Utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -29,8 +30,11 @@ public class DriverFactory {
                     EdgeOptions options = new EdgeOptions();
                     options.addArguments("--start-maximized");
                     HashMap<String, Object> hashMap = new HashMap<>();
-                    hashMap.put("download.default_directory","test-outputs/Invoices");
-                    options.setExperimentalOption("pref",hashMap);
+                    LogsUtils.info(System.getProperty("user.dir"));
+                    hashMap.put("download.default_directory",Utility.getProjectPath() + "\\test-outputs\\Invoices");
+
+                    Utility.getProjectPath();
+                    options.setExperimentalOption("prefs",hashMap);
                     driverThreadLocal.set(new EdgeDriver(options));
             }
 

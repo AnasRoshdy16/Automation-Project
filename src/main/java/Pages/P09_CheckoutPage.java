@@ -14,6 +14,7 @@ public class P09_CheckoutPage {
     private final By deliveryAddressLocator = By.xpath("(//li[.='Cairo'])[1]");
     private final By billingAddressLocator = By.xpath("(//li[.='NotCairo'])[2]");
 
+
     public P09_CheckoutPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -28,7 +29,7 @@ public class P09_CheckoutPage {
         return Utility.checkVisibility(driver, orderDetailsLocator);
     }
 
-    public P09_CheckoutPage addingcomment(String Comment) {
+    public P09_CheckoutPage addingComment(String Comment) {
         Utility.scrolling(driver, commentAreaLocator);
         Utility.sendData(driver, commentAreaLocator, Comment);
         return new P09_CheckoutPage(driver);
@@ -57,4 +58,5 @@ public class P09_CheckoutPage {
         Utility.clickingOnElement(driver, placeOrderButton);
         return new P10_PaymentPage(driver);
     }
+
 }

@@ -123,8 +123,8 @@ public class Utility {
                         .visibilityOfElementLocated(locator));
         return Utility.byToWebElement(driver, locator).isDisplayed();
     }
-    /*public boolean CheckInvoiceIsDownloaded() {
-        File Invoice = new File("\"C:\\Users\\Anas\\Downloads\\invoice.txt\"");
+    public static boolean CheckInvoiceIsDownloaded() {
+        File Invoice = new File("test-outputs/Invoices/invoice.txt");
 
 
         // Check if the specified file
@@ -132,7 +132,7 @@ public class Utility {
         // Exists or not
 
         return Invoice.exists();
-    }*/
+    }
 
     public static void closeAdByRefreshing(WebDriver driver, By locator) {
         driver.navigate().refresh();
@@ -143,6 +143,10 @@ public class Utility {
         }
 
 
+    }
+    public static String getProjectPath(){
+
+     return System.getProperty("user.dir");
     }
 
 

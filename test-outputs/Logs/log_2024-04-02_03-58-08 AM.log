@@ -1,0 +1,5 @@
+[INFO] 02-04-2024 03:58:08 [main] [Tests.T06_CheckoutRelatedTests.setup(T06_CheckoutRelatedTests.java:25)] -  Edge Driver is opened 
+[INFO] 02-04-2024 03:58:12 [main] [Tests.T06_CheckoutRelatedTests.setup(T06_CheckoutRelatedTests.java:27)] -  Page is redirected to the URL 
+[INFO] 02-04-2024 03:58:13 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:9)] - Test Case DownloadInvoiceAfterPurchaseOrderTC started
+[INFO] 02-04-2024 03:58:36 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:13)] - Test Case DownloadInvoiceAfterPurchaseOrderTC passed
+[INFO] 02-04-2024 03:58:38 [main] [DriverFactory.DriverFactory.quitDriver(DriverFactory.java:48)] -  The browser is closed

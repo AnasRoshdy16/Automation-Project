@@ -75,5 +75,11 @@ public class P02_LoginPage {
         Utility.clickingOnElement(driver, SignupButton);
         return new P03_SignupPage(driver);
     }
+    public P03_SignupPage loginSteps(String LoginEmailtext,String PasswordText) {
+        Utility.sendData(driver, LoginEmail, LoginEmailtext);
+        Utility.sendData(driver, Password, PasswordText);
+        Utility.clickingOnElement(driver, LoginButton);
+        return new P03_SignupPage(driver);
+    }
 
 }

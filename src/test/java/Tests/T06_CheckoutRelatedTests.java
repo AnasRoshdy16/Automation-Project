@@ -2,10 +2,9 @@ package Tests;
 
 import Listeners.IInvokedMethodListenerClass;
 import Listeners.ITestResultListenerClass;
-import Pages.P01_HomePage;
-import Pages.P02_LoginPage;
-import Pages.P09_CheckoutPage;
+import Pages.*;
 import Utilities.LogsUtils;
+import Utilities.Utility;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -51,7 +50,7 @@ public class T06_CheckoutRelatedTests {
         Assert.assertTrue(new P09_CheckoutPage(getDriver()).addressDetailsVisibility());
         Assert.assertTrue(new P09_CheckoutPage(getDriver()).orderDetailsVisibility());
         //Submitting a comment to be added in the invoice
-        new P09_CheckoutPage(getDriver()).addingcomment("The order has been placed successfully")
+        new P09_CheckoutPage(getDriver()).addingComment("The order has been placed successfully")
                 //Clicking place order to go to the payment page
                 .placingOrder()
                 //Filling card information
@@ -82,6 +81,35 @@ public class T06_CheckoutRelatedTests {
         Assert.assertTrue(new P09_CheckoutPage(getDriver()).ComparingDeliveryAddresses());
         Assert.assertTrue(new P09_CheckoutPage(getDriver()).ComparingBillingAddresses());
     }
+    @Test
+    public void DownloadInvoiceAfterPurchaseOrderTC(){
+        //Login
+        new P01_HomePage(getDriver())
+                .clickOnSignupButton()
+                .loginSteps(getJsonData("SignupInformation", "ValidEmail"),
+                        getJsonData("SignupInformation", "ValidPassword"));
+        new P01_HomePage(getDriver()).clickOnProductsButton()
+                // Adding First product in the cart
+                .addingFirstProductToCart()
+                // Clicking on cart button to view cart page
+                .clickViewCartButton()
+                //Clicking the proceed to Checkout Button
+                .clickProceedToCheckout();
+        // Adding a comment and payment details
+        new P09_CheckoutPage(getDriver()).addingComment("I need a blue T-shirt")
+                .placingOrder()
+                .FillingPaymentDetails()
+                .ClickPayAndConfirm();
+        Assert.assertTrue(new P11_OrderPlacedPage(getDriver()).orderConfirmedVisibility());
+        // Download the invoice
+        new P11_OrderPlacedPage(getDriver())
+                .clickDownloadInvoice()
+                .clickContinue();
+
+        Assert.assertTrue(Utility.CheckInvoiceIsDownloaded());
+
+    }
+
 
 
     @AfterMethod

@@ -19,6 +19,7 @@ public class P10_PaymentPage {
     }
 
     public P10_PaymentPage FillingPaymentDetails() {
+        Utility.closeAdByRefreshing(driver, nameOnCardLocator);
         Utility.sendData(driver, nameOnCardLocator, "StaticName");
         Utility.sendData(driver, cardNumberLocator, "4435123412341233");
         Utility.sendData(driver, cvcLocator, "211");
